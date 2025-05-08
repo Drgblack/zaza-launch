@@ -1,0 +1,14 @@
+{
+  "name": "zaza-web",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "next dev",
+    "build": "next build",
+    "export": "next export"
+  },
+  "dependencies": {
+    "next": "latest",
+    "react": "latest",
+    "react-dom": "latest"
+  }
+}
