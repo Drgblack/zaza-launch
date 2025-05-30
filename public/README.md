@@ -47,3 +47,4 @@ v0.3.1
 v0.3.2
 -   Designed the founder page.
 -   The placeholder logo and added and avatar to the founder page.
+-   Removed "placeholder video" iframe from the index file.
