@@ -167,7 +167,7 @@ footer a {
     'opsz' 48;
 }
 
-@media (max-width: 650px) {
+@media (max-width: 550px) {
   nav {
     display: block;
   }
@@ -303,21 +303,27 @@ p {
   color: var(--zazaorange)
 }
 
+#table-div {
+  display: flex;
+  justify-content: center;
+}
+
 #features-table {
   border: 2px solid var(--zazaorange);
-  margin: auto;
+  margin: auto auto 20px auto;
   border-radius: 15px;
 }
 
 #features-table td {
   border: 2px solid var(--zazaorange);
-  padding: 10px;
+  padding: 5px;
   border-radius: 7px;
 }
   
 #features-table th {
   padding: 10px;
 }
+
 .faq-item {
   border: 2px solid var(--zazaorange);
   border-radius: 15px;

@@ -40,3 +40,6 @@ v0.3.0
 -   Bug fixes. (Overflow and responsiveness related.)
 -   Added faqs.html, contacts.html and about.html.
 -   Made the buttons redirect to the contact page for now.
+
+v0.3.1
+-   Fixed the table responsiveness issue (Wrapped the table in a div, made the div a flex container, justified it's items).
