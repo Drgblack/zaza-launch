@@ -43,3 +43,7 @@ v0.3.0
 
 v0.3.1
 -   Fixed the table responsiveness issue (Wrapped the table in a div, made the div a flex container, justified it's items).
+
+v0.3.2
+-   Designed the founder page.
+-   The placeholder logo and added and avatar to the founder page.
