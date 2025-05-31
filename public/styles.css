@@ -1,91 +1,35 @@
+/*
+Here's how I grouped the selectors. I'd say use Ctrl + F, but you never
+know. This could help someone:
+  |-  Colours
+  |-  Buttons
+  |-  Main Divs
+  | |-  Header Section
+  | |-  Footer
+  | |-  Containers
+  | |-  Why Now Section
+  | |-  FAQ Section
+  |-  "||"
+  |-  Symbols
+  |-  Tables
+  |-  No Scroll-bar
+  |-  @media Queries
+/*Colours*/
 :root {
-  --zazapurple: #8C3BF5;
-  --zazapink: #FE2978;
-  --zazaorange: #FD5566;
-  --zazablack: #463239;
+  --color-primary: #FE2978;
+  --color-secondary: #8C3BF5;
 }
 
-body {
-  font-family: Inter, Arial, sans-serif;
-  margin: 0;
-  text-align: center;
-  width: 100%;
-  font-size: 120%;
+.primary-color {
+  color: var(--color-primary)
 }
 
-header {
-  display: flex;
-  flex-wrap: wrap;
-  color: var(--zazapurple);
-  font-weight: bold;
-  background-color: white;
-  align-items: center;
+.secondary-color {
+  color: var(--color-secondary)
 }
+/*--*/
 
-#placeholder-logo {
-  background-color: black;
-  border-radius: 50%;
-  width: 55px;
-  height: 55px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-}
-
-#logo {
-  border-radius: 50%;
-  width: 55px;
-  height: 55px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  border: 5px solid black;
-}
-
-#avatar {
-  border-radius: 50%;
-  width: 100px;
-  height: 100px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  border: 5px solid black;
-  margin: auto;
-}
-
-nav {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 30px;
-}
-
-nav ul {
-  display: flex;
-  gap: 20px;
-  align-items: center;
-  justify-content: flex-end;
-  padding: 0;
-  margin: 0;
-}
-
-nav li {
-  list-style: none;
-}
-
-nav a {
-  text-decoration: none;
-  color: var(--zazaorange);
-}
-
-#current-page {
-  color: var(--zazapurple);
-}
-
+/*Buttons*/
 button {
   border: 2px solid rgb(38, 38, 38);
   border-radius: 5px;
@@ -109,14 +53,25 @@ button:active {
 
 .primary-btn {
   background-color: white;
-  color: var(--zazaorange);
-  border: 2px solid var(--zazaorange)
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary)
 }
 
 .secondary-btn {
   background-color: white;
-  color: var(--zazapurple);
-  border: 2px solid var(--zazapurple)
+  color: var(--color-secondary);
+  border: 2px solid var(--color-secondary)
+}
+/*--*/
+
+/*Main Divs*/
+
+body {
+  font-family: Inter, Arial, sans-serif;
+  margin: 0;
+  text-align: center;
+  width: 100%;
+  font-size: 120%;
 }
 
 main {
@@ -124,46 +79,71 @@ main {
   padding: 50px 0;
 }
 
-h1 {
-  font-size: 2.5rem;
-  max-width: 800px;
+section {
+  border-radius: 50px;
+  margin: 10px auto 30px auto;
+  opacity: 97%;
+  background-color: white;
+  max-width: 900px;
+  border: 2px solid var(--color-primary);
+  padding: 40px 20px;
 }
 
-h1, h1 ~ p {
-  margin: auto;
-  padding: 10px;
-}
-
-h1 + p {
-  max-width: 400px;
-  font-weight: 500;
-}
-
-.iframe-wrapper {
-  position: relative;
-  max-width: 90%;
-  padding-bottom: 56.25%;
-  margin: 20px auto;
-}
-
-.iframe-wrapper iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+iframe {
+  border: 3px solid var(--color-primary);
   border-radius: 15px;
-}
-
-.body-text {
-  text-align: left;
+  width: 400px;
+  height: 500px;
+  display: block;
   margin: auto;
-  width: 500px;
+  max-width: 100%;
 }
 
+  /*Header*/
+header {
+  display: flex;
+  flex-wrap: wrap;
+  font-weight: bold;
+  background-color: white;
+  align-items: center;
+}
+
+#logo {
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  border: 4px solid black;
+}
+
+nav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+}
+
+nav > ul {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+nav li {
+  list-style: none;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+}
+  /*--*/
+
+  /*Footer*/
 footer {
   padding: 20px;
-  background-color: var(--zazablack);
+  background-color: #463239;
   color: white;
 }
 
@@ -177,11 +157,145 @@ footer a {
   margin: auto;
   align-self: center;
 }
+  /*--*/
 
-#mail-icon {
-  vertical-align: -6.5px;
+  /*Containers*/
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: auto;
+  justify-content: space-around;
+  padding: 40px;
+  list-style: none;
+  font-weight: 500;
+  gap: 10px;
 }
 
+.flex-container-item {
+  min-height: 200px;
+  max-width: 300px;
+  border-radius: 15px;
+  padding: 20px;
+  margin-bottom: 10px;
+  border: 3px solid var(--color-primary);
+  max-height: 400px;
+  flex: 1 1 200px;
+}
+
+.card {
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card:hover {
+  transform: scale(1.2);
+}
+
+#parallax-bg {
+  background-image: url("./images/322695551386.jpg");
+  position: fixed;
+  top: -600px;
+  left: 0;
+  width: 100%;
+  height: 300vh;
+  border: 1px solid red;
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+  /*--*/
+
+  /*Why Now Section*/
+#why-now-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+#why-now-section  div {
+  max-width: 400px;
+  align-self: center;
+}
+  /*--*/
+
+  /*FAQ Section*/
+.faq-item {
+  border: 2px solid var(--color-primary);
+  border-radius: 15px;
+  padding: 20px;
+  max-width: 800px;
+  margin: 3px auto 3px auto;
+  text-align: left;
+}
+.faq-question {
+  cursor: pointer;
+  padding: 1em;
+  font-weight: bold;
+}
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.5s ease;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+input[type="checkbox"]:checked ~ .faq-answer {
+  max-height: 1500px; /* adjust as needed */
+  padding: 1em;
+}
+
+.faq-answer{
+  text-align: left;
+}
+  /*--*/
+/*End of Main Divs*/
+
+/*||*/
+h1 {
+  font-size: 2.5rem;
+  max-width: 600px;
+}
+
+h2 {
+  max-width: 600px;
+  margin: auto;
+}
+
+h1, p {
+  margin: auto;
+  padding: 10px;
+}
+
+p {
+  max-width: 800px;
+}
+
+.a-bit-bolder {
+  font-weight: 500;
+  max-width: 600px;
+}
+
+#avatar {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border: 5px solid black;
+  margin: auto;
+}
+/*--*/
+
+/*Symbols*/
 .material-symbols-outlined {
   font-variation-settings:
     'FILL' 0,
@@ -190,7 +304,44 @@ footer a {
     'opsz' 48;
 }
 
+#mail-icon {
+  vertical-align: -6.5px;
+}
+/*--*/
+
+/*Tables*/
+#table-div {
+  display: flex;
+  justify-content: center;
+}
+
+#features-table {
+  border: 2px solid var(--color-primary);
+  margin: auto auto 20px auto;
+  border-radius: 15px;
+}
+
+#features-table td {
+  border: 2px solid var(--color-primary);
+  padding: 5px;
+  border-radius: 7px;
+  text-align: left;
+}
+  
+#features-table th {
+  padding: 10px;
+}
+/*--*/
+
+/*No Scroll-bar*/
+body::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+/*--*/
+
+/*@media Queries*/
 @media (max-width: 550px) {
+  /*Header*/
   nav {
     display: block;
   }
@@ -209,174 +360,18 @@ footer a {
   #logo {
     margin: 10px auto auto auto;
   }
+  /*--*/
 
   body {
     width: 100%;
+  }
+
+  section {
+    padding: auto;
   }
 
   .list-item-div {
     padding: none;
   }
 }
-
-.flex-ul {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  margin: auto;
-  justify-content: space-around;
-  padding: 40px;
-  list-style: none;
-  font-weight: 500;
-  gap: 10px;
-}
-
-.list-item-div {
-  min-height: 200px;
-  max-width: 300px;
-  border-radius: 15px;
-  padding: 20px;
-  margin-bottom: 10px;
-  border: 3px solid var(--zazapink);
-  max-height: 400px;
-  flex: 1 1 200px;
-}
-
-.card {
-  border-radius: 15px;
-  transition: 0.3s;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.card:hover {
-  transform: scale(1.2);
-}
-
-section {
-  padding: 40px 40px;
-  border-radius: 60px;
-  margin: 10px auto 30px auto;
-  opacity: 97%;
-  background-color: white;
-  max-width: 900px;
-  border: 2px solid var(--zazaorange)
-}
-
-#why-now-section {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
-
-#why-now-section  div {
-  max-width: 400px;
-  align-self: center;
-}
-
-#why-now-section iframe {
-  height: 550px;
-}
-
-/*section:nth-of-type(2n){
-  background: linear-gradient(
-    var(--zazaorange),
-    var(--zazapurple)
-  );
-}
-
-section:nth-of-type(2n - 1){
-  background: linear-gradient(
-    var(--zazapurple),
-    var(--zazaorange)
-  );
-}*/
-
-input[type="email"]{
-  padding: 15px;
-  display: block;
-  margin: 10px auto;
-}
-
-body::-webkit-scrollbar {
-  display: none; /* Chrome, Safari, Opera */
-}
-
-p {
-  max-width: 900px;
-  margin: auto;
-}
-
-#parallax-bg {
-  background-image: url("./images/322695551386.jpg");
-  position: fixed;
-  top: -600px;
-  left: 0;
-  width: 100%;
-  height: 300vh;
-  border: 1px solid red;
-  background-size: cover;
-  background-position: center;
-  z-index: -1;
-}
-
-.primary-color {
-  color: var(--zazapurple)
-}
-
-.secondary-color {
-  color: var(--zazaorange)
-}
-
-#table-div {
-  display: flex;
-  justify-content: center;
-}
-
-#features-table {
-  border: 2px solid var(--zazaorange);
-  margin: auto auto 20px auto;
-  border-radius: 15px;
-}
-
-#features-table td {
-  border: 2px solid var(--zazaorange);
-  padding: 5px;
-  border-radius: 7px;
-}
-  
-#features-table th {
-  padding: 10px;
-}
-
-.faq-item {
-  border: 2px solid var(--zazaorange);
-  border-radius: 15px;
-  padding: 20px;
-  max-width: 800px;
-  margin: 3px auto 3px auto;
-  text-align: left;
-}
-.faq-question {
-  cursor: pointer;
-  padding: 1em;
-  font-weight: bold;
-}
-.faq-answer {
-  max-height: 0;
-  overflow: hidden;
-  transition: 0.5s ease;
-}
-input[type="checkbox"] {
-  display: none;
-}
-input[type="checkbox"]:checked ~ .faq-answer {
-  max-height: 1500px; /* adjust as needed */
-  padding: 1em;
-}
-
-.faq-answer{
-  text-align: left;
-}
+/*--*/

@@ -48,3 +48,12 @@ v0.3.2
 -   Designed the founder page.
 -   The placeholder logo and added and avatar to the founder page.
 -   Removed "placeholder video" iframe from the index file.
+
+v0.4.0
+-   Mainly improved the semantics of the code.
+-   Page titles now reflect the page name. Not in a substitution by variable manner where the code fetches the name of the page or something, it's still a simple static website. End goal is to integrate something like this.
+-   Added favicon to all pages.
+-   Deleted redundant code like unnecessary styles and ids.
+-   Added comments to group similar styles.
+-   Moved iframe styling to css.
+-   Grouped CSS selectors (more in the css comments... It's a whole tree).
