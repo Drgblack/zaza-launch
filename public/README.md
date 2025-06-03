@@ -57,3 +57,6 @@ v0.4.0
 -   Added comments to group similar styles.
 -   Moved iframe styling to css.
 -   Grouped CSS selectors (more in the css comments... It's a whole tree).
+
+v0.4.1
+-   Added a "built by" button at the footer.
