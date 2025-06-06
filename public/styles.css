@@ -5,6 +5,7 @@ know. This could help someone:
   |-  Buttons
   |-  Main Divs
   | |-  Header Section
+  | |-  Form
   | |-  Footer
   | |-  Containers
   | |-  Why Now Section
@@ -142,6 +143,11 @@ nav a {
 }
   /*--*/
 
+#waitlist-form {
+  width: 100%;
+  height: 700px;
+  border: none;
+}
   /*Footer*/
 footer {
   padding: 20px;
@@ -374,6 +380,11 @@ body::-webkit-scrollbar {
 
   .list-item-div {
     padding: none;
+  }
+
+  #waitlist-form {
+  height: 900px;
+  border: none;
   }
 }
 /*--*/
