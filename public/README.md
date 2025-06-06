@@ -60,3 +60,7 @@ v0.4.0
 
 v0.4.1
 -   Added a "built by" button at the footer.
+
+v0.4.2
+-   Updated some sections and text. Nothing code heavy.
+-   Updated the Brevo form. I made it and then changed the src for all the iframes.
